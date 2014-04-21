@@ -18,9 +18,9 @@ public class HealthyPerson extends Person
    public HealthyPerson (String n, double w, double h)
    {
    
-   super(n);
-   weight= w;
-   height = h;
+       super(n);
+       weight= w;
+       height = h;
    
    }
    
@@ -61,7 +61,7 @@ public class HealthyPerson extends Person
    
    public String toString()
    {
-        return super.toString()+ " BMI is:  " + Math.round(calBMI());   
+      return super.toString()+ " BMI is:  " + Math.round(calBMI());   
    }
 
 }

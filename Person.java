@@ -16,7 +16,7 @@ public class Person
    
    public Person(String n)
    {
-       name = n;
+      name = n;
    
    }
    

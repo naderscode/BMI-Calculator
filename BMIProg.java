@@ -100,19 +100,19 @@ public class BMIProg extends JFrame
                String name;
                name=nameField.getText();
                //make sure name field is not empty
-               if(!name.isEmpty())
-               {
-               
-                  person.setName(nameField.getText());
-                  
-                  JOptionPane.showMessageDialog(null, person.toString(),"Nader BMI Calculator",JOptionPane.INFORMATION_MESSAGE);
-
-               }
-                else
-                {
-                     JOptionPane.showMessageDialog(null, "Invalid entry. You must enter your name: ","EXCEPTION ",JOptionPane.ERROR_MESSAGE);
-   
-                }// end else
+                 if(!name.isEmpty())
+                   {
+                   
+                      person.setName(nameField.getText());
+                      
+                      JOptionPane.showMessageDialog(null, person.toString(),"Nader BMI                          Calculator",JOptionPane.INFORMATION_MESSAGE);
+    
+                   }
+                    else
+                        {
+                             JOptionPane.showMessageDialog(null, "Invalid entry. You must                               enter your name: ","EXCEPTION ",JOptionPane.ERROR_MESSAGE);
+           
+                        }// end else
          
          }// end actionPerformed
       }// end class
@@ -130,63 +130,58 @@ public class BMIProg extends JFrame
                   double height, weight;                                     
                   
                  // get user input of name, height and weight       
-                            
                   name = nameField.getText();
-                        
-       if(!name.isEmpty())// check for an empty name field
-       {
-         // check for input mismatch exceptions in height field input
-         try
-         {
-           Double.parseDouble(heightField.getText());
-                     
-          }
-         catch (NumberFormatException exception)
-         {
-          JOptionPane.showMessageDialog(null, "Please enter a positive NUMBER for height\n"+ exception.toString(),"Input Mismatch Exception ",JOptionPane.ERROR_MESSAGE);
-         } // end catch 
+                                        
+                       if(!name.isEmpty())// check for an empty name field
+                       {
+                         // check for input mismatch exceptions in height field input
+                         try
+                         {
+                           Double.parseDouble(heightField.getText());
+                                     
+                          }
+                         catch (NumberFormatException exception)
+                         {
+                          JOptionPane.showMessageDialog(null, "Please enter a positive                              NUMBER for height\n"+ exception.toString(),"Input Mismatch                                Exception ",JOptionPane.ERROR_MESSAGE);
+                         } // end catch 
          
-          // check for input mismatch exceptions in weight field input
-          try
-         {
-           
-           Double.parseDouble(weightField.getText());
-          
-          }
-         catch (NumberFormatException exception)
-         {
-          JOptionPane.showMessageDialog(null, "Please enter a positive NUMBER for weight\n"+ exception.toString(),"Input Mismatch Exception ",JOptionPane.ERROR_MESSAGE);
-         } // end catch 2
-
-            
-               height = Double.parseDouble(heightField.getText());
-               weight = Double.parseDouble(weightField.getText());
-                       
-               hPerson.setName(name);
-            
-          if(height !=0)
-          {
-            
-               hPerson.setHeight(height);
-               hPerson.setWeight(weight);
-                      
-              JOptionPane.showMessageDialog(null, hPerson.toString(),"Nader BMI Calculator",JOptionPane.INFORMATION_MESSAGE);            
-           }
-            else
-          {
-             JOptionPane.showMessageDialog(null, "Cannot Divide by Zero!\n" +"Please enter a positive NUMBER for height","EXCEPTION ",JOptionPane.ERROR_MESSAGE);
-          }
-          
-           // }
-            
-      }//end if
-      //Warn user to enter name if namefield is left blank
-      else
-       {
-             JOptionPane.showMessageDialog(null, "You must enter your name: ","Invalid entry! ",JOptionPane.ERROR_MESSAGE);
-
-       }//end else
-                  
+                          // check for input mismatch exceptions in weight field input
+                          try
+                         {
+                           
+                           Double.parseDouble(weightField.getText());
+                          
+                         }
+                         catch (NumberFormatException exception)
+                         {
+                          JOptionPane.showMessageDialog(null, "Please enter a positive NUMBER for weight\n"+ exception.toString(),"Input Mismatch Exception ",JOptionPane.ERROR_MESSAGE);
+                         } // end catch 2
+                
+                               height = Double.parseDouble(heightField.getText());
+                               weight = Double.parseDouble(weightField.getText());       
+                               hPerson.setName(name);
+                            
+                          if(height !=0)
+                          {
+                            
+                               hPerson.setHeight(height);
+                               hPerson.setWeight(weight);
+                                      
+                              JOptionPane.showMessageDialog(null,                                                       hPerson.toString(),"Nader BMI                  Calculator",JOptionPane.INFORMATION_MESSAGE);            
+                          }
+                            else
+                          {
+                             JOptionPane.showMessageDialog(null, "Cannot Divide by Zero!\n" +"Please enter a positive NUMBER for height","EXCEPTION ",JOptionPane.ERROR_MESSAGE);
+                          }
+                                               
+                      }//end if
+                      //Warn user to enter name if namefield is left blank
+                      else
+                       {
+                          JOptionPane.showMessageDialog(null, "You must enter your name: ","Invalid entry! ",JOptionPane.ERROR_MESSAGE);
+                
+                       }//end else
+                                  
           }// end action performed
           
     }// end class CalculateButtonHandler
