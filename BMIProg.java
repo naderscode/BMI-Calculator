@@ -12,82 +12,82 @@ import javax.swing.*;
 
 public class BMIProg extends JFrame 
 {
-     private JLabel nameLabel, heightLabel, weightLabel; 
-     private JTextField nameField, heightField, weightField;
-     private JButton calculateButton, exitButton;
+          private JLabel nameLabel, heightLabel, weightLabel; 
+          private JTextField nameField, heightField, weightField;
+          private JButton calculateButton, exitButton;
+          
+          private CalculateButtonHandler cbHandler;
+          private ExitButtonHandler ebHandler;
+          private NameFieldHandler  nfHandler;
+              
+          // create objects from classes
+          Person person = new Person();
+          HealthyPerson hPerson = new HealthyPerson();
      
-     private CalculateButtonHandler cbHandler;
-     private ExitButtonHandler ebHandler;
-     private NameFieldHandler  nfHandler;
-         
-     // create objects from classes
-     Person person = new Person();
-     HealthyPerson hPerson = new HealthyPerson();
-
-     private static final int WIDTH = 400;
-     private static final int HEIGHT = 300;
+          private static final int WIDTH = 400;
+          private static final int HEIGHT = 300;
      
      // CONSTRUCTOR
      public BMIProg()
      {
-     // create labels
-     nameLabel = new JLabel("Enter Name  ");
-     heightLabel  = new JLabel("Enter Height in Inches  ");
-     weightLabel = new JLabel("Enter Weight in Pounds  ");
-           
-     // create textfields
-     nameField = new JTextField(10);
-     heightField = new JTextField(10);
-     weightField = new JTextField(10);
-        
-     // set alignment of TextFields
-     nameField.setHorizontalAlignment(JTextField.RIGHT);
-     heightField.setHorizontalAlignment(JTextField.RIGHT);
-     weightField.setHorizontalAlignment(JTextField.RIGHT);
+               // create labels
+               nameLabel = new JLabel("Enter Name  ");
+               heightLabel  = new JLabel("Enter Height in Inches  ");
+               weightLabel = new JLabel("Enter Weight in Pounds  ");
+                     
+               // create textfields
+               nameField = new JTextField(10);
+               heightField = new JTextField(10);
+               weightField = new JTextField(10);
+                  
+               // set alignment of TextFields
+               nameField.setHorizontalAlignment(JTextField.RIGHT);
+               heightField.setHorizontalAlignment(JTextField.RIGHT);
+               weightField.setHorizontalAlignment(JTextField.RIGHT);
+                          
+               // set alignment of labels
+               nameLabel.setHorizontalAlignment(JTextField.RIGHT);
+               heightLabel.setHorizontalAlignment(JTextField.RIGHT);
+               weightLabel.setHorizontalAlignment(JTextField.RIGHT);
+                         
+               // create calculate button
+               calculateButton = new JButton("Compute BMI");
+               cbHandler = new CalculateButtonHandler();
+               calculateButton.addActionListener(cbHandler);
+                   
+               //create exit button
+               exitButton = new JButton("Exit");
+               ebHandler = new ExitButtonHandler();
+               exitButton.addActionListener(ebHandler);
                 
-     // set alignment of labels
-     nameLabel.setHorizontalAlignment(JTextField.RIGHT);
-     heightLabel.setHorizontalAlignment(JTextField.RIGHT);
-     weightLabel.setHorizontalAlignment(JTextField.RIGHT);
-               
-     // create calculate button
-     calculateButton = new JButton("Compute BMI");
-     cbHandler = new CalculateButtonHandler();
-     calculateButton.addActionListener(cbHandler);
-         
-         //create exit button
-         exitButton = new JButton("Exit");
-         ebHandler = new ExitButtonHandler();
-         exitButton.addActionListener(ebHandler);
-         
-         // create name field handler
-         nfHandler = new NameFieldHandler();
-         nameField.addActionListener(nfHandler);
-         
-         // set window title
-         setTitle("Nader's BMI Calculator");
-         
-         // get Container
-         Container pane = getContentPane();
-         
-         //set layout
-         pane.setLayout(new GridLayout(4, 2));
+               // create name field handler
+               nfHandler = new NameFieldHandler();
+               nameField.addActionListener(nfHandler);
+                   
+               // set window title
+               setTitle("Nader's BMI Calculator");
+              
+               // get Container
+               Container pane = getContentPane();
+              
+               //set layout
+               pane.setLayout(new GridLayout(4, 2));
          
          
-         // place components
-         pane.add(nameLabel);
-         pane.add(nameField);
-         pane.add(heightLabel);
-         pane.add(heightField);
-         pane.add(weightLabel);
-         pane.add(weightField);
-         pane.add(calculateButton);
-         pane.add(exitButton);
+              // place components
+              pane.add(nameLabel);
+              pane.add(nameField);
+              pane.add(heightLabel);
+              pane.add(heightField);
+              pane.add(weightLabel);
+              pane.add(weightField);
+              pane.add(calculateButton);
+              pane.add(exitButton);
          
-         // set size of window and display it         
-        setSize(WIDTH, HEIGHT);
-        setVisible(true);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+              // set size of window and display it         
+             setSize(WIDTH, HEIGHT);
+             setVisible(true);
+             setDefaultCloseOperation(EXIT_ON_CLOSE);
                       
       } // end constructor
       
