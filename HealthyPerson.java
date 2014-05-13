@@ -6,9 +6,9 @@
 
 public class HealthyPerson extends Person
 {
-   private double weight;
-   private double height;
-   
+      private double weight;
+      private double height;
+      
    
    public HealthyPerson()
    {
